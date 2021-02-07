@@ -79,7 +79,9 @@ Worksheets("All Stocks Analysis").Activate
 Finally, the timer was ended with a message box that showed how long it took to run the code. 
 endTime = Timer
     MsgBox "This code ran in " & (endTime - startTime) & " seconds for the year " & (yearValue)
-
+**2017 Message Box**
 ![image_name](2017%20Refactored%20Screen%20Shot%20Time%20Ran.png)
+
+**2018 Message Box**
 ![image_name](2018%20Refactored%20Screen%20Shot%20Time%20Ran.png)
 ## Summary
