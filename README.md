@@ -1,12 +1,14 @@
 # danielle_drogos_stock-analysis
 ## Module 2 Challenge Stock Analysis VBA
 
-### Overview
+## Overview
 The purpose of this project was to at first look at the stock "DQ" and then see if it yielded a high return for Steve's parents.
 After looking at "DQ", there were 12 other stocks that Steve wanted to look into with a formula that automatically calculated the volume and return for each year. 
 Since the initial code set up did run successfully, the new task was to see if there was a way to rewrite or refactor the code in order to improve efficiency. 
 
-### Results
+## Results
+
+### Set-Up
 The refactored code retains all the functionality of the original code, including the majority of the initial set-up. First, startTime and endTime were set to the "Single" data type (Dim startTime As Single)(Dim endTime as Single).  Then the year input box was added so that the user could provide which year they would like to run the analysis on. (yearValue = InputBox("What year would you like to run the analysis on?")).
 Second, the timer was started in order to track the run time of the code (starTime = Timer).
 The next step was to format the output on the 'All Stocks Analysis tab' by first activating the tab that needed to be used (Worksheets("All Stocks Analysis").Activate) and then adding the header for whichever year input was added. (Range("A1").Value = "All Stocks (" + yearValue + ")".
@@ -16,6 +18,7 @@ After the analysis sheet was set up visually, the 12 tickers needed to be hard c
 After the variable "tickers" was defined, the worksheet for the year provided from user input was activated (Worksheets(yearValue).Activate)
 Code was then added to get the number of rows to loop over (RowCount = Cells(rows.Count,"A"). End(xlUp).row)
 
+### Arrays v Cells
 The next line is where the refactored code starts to differ from the original code. In the refactored code, the variable tickerIndex was created (Dim tickerIndex As Integer) and set to 0 (tickerIndex = 0), versus the original code which started looping through the tickers (For i = 0 To 11) (ticker = tickers(i)).
 
 Along with the new tickerIndex variable, three arrays were additionally set up (Dim tickerVolumes(12) As Long), (Dim tickerStartingPrices(12) As Single), and (Dim tickerEndingPrices (12) As Single).
@@ -56,6 +59,7 @@ Lastly, the code needed to print the values it obtained from each ticker from th
         Cells(4 + i, 2).Value = tickerVolumes(i)
         Cells(4 + i, 3).Value = tickerEndingPrices(i) / tickerStartingPrices(i) - 1
 
+### Formatting
  After all the data was collected and printed for the 12 stocks, there was some formatting additions and to color the return red or green depending if it was positive or negative.       
 Worksheets("All Stocks Analysis").Activate
     Range("A3:C3").Font.FontStyle = "Bold"
@@ -76,4 +80,6 @@ Finally, the timer was ended with a message box that showed how long it took to 
 endTime = Timer
     MsgBox "This code ran in " & (endTime - startTime) & " seconds for the year " & (yearValue)
 
-### Summary
+![image_name](2017%20Refactored%20Screen%20Shot%20Time%20Ran.png)
+![image_name](2018%20Refactored%20Screen%20Shot%20Time%20Ran.png)
+## Summary
