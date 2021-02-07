@@ -1,12 +1,12 @@
 # danielle_drogos_stock-analysis
-##Module 2 Challenge Stock Analysis VBA
+## Module 2 Challenge Stock Analysis VBA
 
-###Overview
+### Overview
 The purpose of this project was to at first look at the stock "DQ" and then see if it yielded a high return for Steve's parents. A
 fter looking at "DQ", there were 12 other stocks that Steve wanted to look into with a formula that automatically calculated the volume and return to see for each year. 
 Since the initial code set up did run successfully, the new task was to see if there was a way to rewrite or refactor the code in order to make it run faster. 
 
-###Results
+### Results
 The refactored code has a lot of similarities to the original code, including  a lof of the initial set-up. First, starttime and end time were set to "Single" type (Dim startTime As Single)(Dim enTime as Single).  Then the year input box was added so that the user can type which year they would like to run the analysis on. (yearValue = InputBox("What year would you like to run the analysis on?")).
 Second, the timer was started in order to track the run time of the code (starTime = Timer).
 The next step was to format the output on the 'All Stocks Analysis tab' by first activating the tab that needed to be used (Worksheets("All Stocks Analysis").Activate) and then adding the header for whichever year input was added. (Range("A1").Value = "All Stocks (" + yearValue + ")".
@@ -75,4 +75,4 @@ Finally, the timer was ended with a message box that showed how long it took to 
 endTime = Timer
     MsgBox "This code ran in " & (endTime - startTime) & " seconds for the year " & (yearValue)
 
-###Summary
+### Summary
