@@ -86,3 +86,9 @@ endTime = Timer
 **2018 Message Box**
 ![image_name](2018%20Refactored%20Screen%20Shot%20Time%20Ran.png)
 ## Summary
+Summary 
+Overall, refactoring didn't save an incredible amount of actual time, about 0.2 seconds saved, but made it more efficient for the computer to run through the code. It also took a lot longer to re-write, debug, and double-check; however, it would be a lot easier to reuse this code for future projects as it is not so reliant on the specific cells in the stock analysis.  
+
+The original code's benefits were that it was a lot easier to write, understand, and add too from a beginning to learn perspective. On the other hand, the refactored code took a while to wrap my head around all the variables and make sure I had everything correct for the code, even if I understood it differently. Still, the refactored code was faster, more transferable, and was a slightly higher risk. Although both versions of the code running under a second, the computer stores the information in memory versus writing to disk by defining arrays. If the computer were to crash or die while running the refactored code, the computer would lose all data in memory, and it would have to be re-run again. Since the original code uses cells and stores the disk's information, it wouldn't have to start from the beginning of the code was interrupted while running. 
+
+The refactoring benefits still outweigh the original code. Re-running something that takes .53 seconds to save many minutes, maybe hours to recycle it on other projects, is much more preferable. 
